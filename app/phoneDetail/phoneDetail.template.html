@@ -1,4 +1,10 @@
-<img ng-src="{{mainImageUrl}}" class="phone" />
+<!--<img ng-src="{{mainImageUrl}}" class="phone" />-->
+
+<div class="phone-images">
+    <img ng-src="{{img}}" class="phone"
+         ng-class="{selected: img === mainImageUrl}"
+         ng-repeat="img in phone.images" />
+</div>
 
 <h1>{{phone.name}}</h1>
 
@@ -48,8 +54,7 @@
             <dt>Bluetooth</dt>
             <dd>{{phone.connectivity.bluetooth}}</dd>
             <dt>Infrared</dt>
-            <dd>{{phone.connectivity.infrared | checkmark}}</dd>
-            <dt>GPS</dt>
+            <dd>{{phone.connectivity.infrared | checi
             <dd>{{phone.connectivity.gps | checkmark}}</dd>
         </dl>
     </li>
